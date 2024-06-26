@@ -1,0 +1,311 @@
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+     padding: 1em;
+  margin: 2em;
+    font-family: Arial, sans-serif;
+    position: relative;
+    z-index: 1;
+    flex-wrap: nowrap;
+  }
+  
+  .nav-section1, .nav-section2 {
+    display: flex;
+    align-items: center;
+    background-color: #f8d4b2fd;
+     padding: 1em;
+    width: 50%;
+    justify-content: space-between;
+    box-sizing: border-box;
+     flex: 1;
+  min-width: 0;
+  position: relative;
+  }
+  
+  .nav-section1 {
+    border-radius: 50px 0 0 50px;
+    position: relative;
+    
+  }
+  
+  .nav-section1::before {
+    content: '';
+    position: absolute;
+    top: 0.15em;
+    right: -1.6em; /* Adjust the distance from the right edge */
+    width: 3em; /* Width of the crescent moon */
+    height: 86%;
+    background-color: transparent;
+    border-radius: 80%; /* Make it a circle initially */
+    transform: translateX(50%); /* Center it horizontally */
+    box-shadow: -1.4em 0.1em 0 0.25em #f8d4b2fd; /* Create the crescent moon shape */
+  }
+  .nav-section2 {
+    border-radius: 0 50px 50px 0;
+     margin-left: -2em;
+     position: relative; /* Ensure relative positioning for absolute child */
+  overflow: visible; /* Ensure overflow is not hiding the moon */
+  line-height: 0.9;
+  }
+  
+  
+.nav-section2::before {
+  content: '';
+  position: absolute;
+  top: 0.15em; /* Adjust vertical positioning as needed */
+  left: -4.7em;
+  width: 3em; /* Width of the crescent moon */
+  height: 88%; /* Height of the crescent moon */
+  background-color: transparent;
+  border-radius: 80%; /* Make it a circle initially */
+  transform: translateX(50%); /* Center it horizontally */
+  box-shadow: 1.4em 0.1em 0 0.25em #f8d4b2fd; /* Create the crescent moon shape */
+}
+
+  .nav-item {
+     margin: 0 0.625em;
+  padding: 0.625em;
+  }
+  
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    z-index: 1;
+  }
+  
+  .logo-img {
+    height: 3.75em;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    text-align: center; /* Center-align text */
+  }
+  
+  .profile span {
+    display: inline-block;
+    
+  }
+  
+  .profile img {
+     border-radius: 50%;
+  margin-left: 0.625em;
+  height: 2.5em;
+  }
+
+  
+
+    @media (max-width: 1200px) {
+  .navbar {
+     margin: 1.5em;
+    padding: 0.75em;
+  }
+
+  .nav-section1, .nav-section2 {
+    width: 42%;
+     padding: 1.5em 1.5em;
+  }
+
+  .nav-item {
+      margin: 0 0.5em;
+    padding: 0.5em;
+  }
+
+  .logo-img {
+    height: 3.5em;
+  }
+
+  .profile img {
+      height: 2.25em;
+  }
+}
+
+  @media (max-width: 992px) {
+  .navbar {
+     margin: 1em;
+    padding: 0.5em;
+  }
+
+  .nav-section1, .nav-section2 {
+    width: 40%;
+     padding: 1.25em 1.25em;
+  }
+
+  .nav-item {
+     margin: 0 0.375em;
+    padding: 0.375em;
+  }
+
+  .logo-img {
+    height: 3.25em;
+  }
+
+  .profile img {
+    height: 2em;
+  }
+}
+
+ @media (min-width: 768px) {
+   .navbar {
+    margin: 0.5em;
+    padding: 0.375em;
+  }
+    .nav-section1, .nav-section2 {
+      width: 45%;
+      padding: 1em 1em;
+      margin-right: 0;
+      margin-left: 0;
+      justify-content: space-between;
+    }
+    
+    .nav-section1::after {
+      display: none; /* Adjustments for mobile view */
+    }
+    
+    .nav-item {
+    margin: 0 0.25em;
+    padding: 0.25em;
+  }
+
+    .logo {
+      position: static;
+      transform: none;
+    }
+
+     .logo-img {
+    height: 3em;
+  }
+
+  .profile img {
+    height: 1.75em;
+  }
+   
+  }
+
+ 
+  @media (max-width: 576px) {
+  .navbar {
+     margin: 0.25em;
+    padding: 0.25em;
+  }
+
+  .nav-section1, .nav-section2 {
+    width: 100%;
+     padding: 0.75em 0.75em;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .nav-section1::after {
+    display: none;
+  }
+
+  .nav-item {
+    margin: 0 0.125em;
+    padding: 0.125em;
+  }
+
+  .logo {
+    position: static;
+    transform: none;
+     margin-bottom: 0.5em;
+  }
+
+  .logo-img {
+      height: 2.75em;
+  }
+
+  .profile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile span {
+     margin-bottom: 0.5em;
+  }
+
+  .profile img {
+     height: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+     margin: 0.125em;
+    padding: 0.125em;
+  }
+
+  .nav-section1, .nav-section2 {
+    width: 34%;
+     padding: 0.5em 0.5em;
+  }
+
+  .nav-item {
+     margin: 0 0.0625em;
+    padding: 0.0625em;
+  }
+
+  .logo-img {
+     height: 2.5em;
+  }
+
+  .profile img {
+     height: 1.25em;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar {
+       margin: 0.125em;
+    padding: 0.125em;
+  }
+
+  .nav-section1, .nav-section2 {
+    width: 32%;
+    padding: 0.375em 0.375em;
+  }
+
+  .nav-item {
+      margin: 0 0.0625em;
+    padding: 0.0625em;
+  }
+
+  .logo-img {
+     height: 2.25em;
+  }
+
+  .profile img {
+    height: 1em;
+  }
+}
+
+@media (max-width: 320px) {
+  .navbar {
+      margin: 0.125em;
+    padding: 0.125em;
+  }
+
+  .nav-section1, .nav-section2 {
+    width: 30%;
+    padding: 0.375em 0.375em;
+  }
+
+  .nav-item {
+     margin: 0 0.0625em;
+    padding: 0.0625em;
+  }
+
+  .logo-img {
+    height: 2em;
+  }
+
+  .profile img {
+    height: 0.875em;
+  }
+}
