@@ -6,7 +6,9 @@
     align-items: center;
     font-family: Arial, sans-serif;
     /* margin-top: 690vh; */
-    margin-top: 850vh;
+    /* margin-top: 540vh; */
+    margin-top: 488vh;
+    /* margin-top: 850vh; */
     padding: 10px 10px;
     box-sizing: border-box;
   }
